@@ -1,0 +1,25 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.grid-con {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 12px;
+    }
+    
+}

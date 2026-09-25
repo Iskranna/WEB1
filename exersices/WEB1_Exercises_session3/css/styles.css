@@ -1,0 +1,40 @@
+body {
+    background-color: greenyellow;
+}
+
+.animal_main {
+    height: 150px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.grid-con{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .grid-con {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .grid-con {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}

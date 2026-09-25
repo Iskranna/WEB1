@@ -1,0 +1,55 @@
+* {
+    font-size: 1.2em;
+}
+
+body {
+    background-color: rgb(255, 229, 173);
+    font-size: 1em;
+}
+
+.main-header {
+    background-image: url("https://i.pinimg.com/736x/9f/9c/7c/9f9c7c0c6f6da716d8344342f0daec44.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    color: #6d0101;
+    font-family: "Times New Roman", monospace;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #c90000;
+}
+
+#header {
+    color: #00FF00;
+}
+
+li {
+    font-size: 0.9em;
+}
+
+img {
+    width: 40%;
+    height: auto;
+    border: 5px solid #6d0101;
+    padding: 5px;
+}
+
+img.small {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+figcaption {
+    font-size: 0.8em;
+    color: #6d0101;
+}
