@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible CSS Grid Website</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Skip link to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Accessible Demo Website</h1>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#main-content">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.w3.org/WAI/" rel="noopener noreferrer">Web Accessibility Initiative</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-grid">
+    <main id="main-content" tabindex="-1">
+      <h2>Welcome to Our Accessible Page</h2>
+      <p>
+        This page demonstrates a CSS Grid layout with semantic HTML landmarks,
+        an accessible form, properly marked-up images, and keyboard-friendly
+        navigation. All interactive elements can be reached and operated with
+        the keyboard alone.
+      </p>
+
+      <figure>
+        <img
+          src="https://picsum.photos/id/1015/600/350"
+          width="600"
+          height="350"
+          alt="A serene mountain landscape reflected in a calm lake under a partly cloudy sky"
+        >
+        <figcaption>
+          Mountain landscape near a lake. Photo from Lorem Picsum (placeholder image).
+        </figcaption>
+      </figure>
+
+      <p>
+        Learn more about accessible web design by visiting the
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" rel="noopener noreferrer">
+          WCAG 2.2 Guidelines
+        </a>
+        published by the W3C Web Accessibility Initiative.
+      </p>
+
+      <h3 id="contact">Contact Form</h3>
+      <form action="#" method="post" aria-labelledby="contact">
+        <div class="form-group">
+          <label for="full-name">Full name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            required
+            autocomplete="name"
+            aria-required="true"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+            aria-required="true"
+            aria-describedby="email-hint"
+          >
+          <p id="email-hint">
+            We will never share your email.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            autocomplete="tel"
+            aria-required="true"
+          >
+          <p id="phone-hint">
+            We will never share your phone number.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" aria-label="Select a contact topic">
+            <option value="none">Please choose…</option>
+            <option value="general">General inquiry</option>
+            <option value="support">Technical support</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Preferred contact method</legend>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="contact-method" value="email" checked>
+              Email
+            </label>
+            <label>
+              <input type="radio" name="contact-method" value="phone">
+              Phone
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" name="newsletter" value="yes">
+            Subscribe to our newsletter
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            aria-required="true"
+            aria-label="Enter your message here"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <aside aria-labelledby="aside-heading">
+      <h2 id="aside-heading">Sidebar Information</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <h3>Quick Facts</h3>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
+        varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus
+        magna felis sollicitudin mauris.
+      </p>
+    </aside>
+
+    <section aria-labelledby="section-heading" id="about">
+      <h2 id="section-heading">About This Layout</h2>
+      <p>
+        Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus
+        vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut
+        ullamcorper, ligula eu tempor congue, eros est euismod turpis, id
+        tincidunt sapien risus a quam.
+      </p>
+      <h3>Design Notes</h3>
+      <p>
+        Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada
+        nulla a mi. Duis sapien sem, aliquet nec, feugiat eget, fermentum id,
+        nisl. Etiam ut purus mattis mauris sodales aliquam.
+      </p>
+      <p>
+        Vivamus viverra, nisl auctor tempus, mauris orci rhoncus purus, non
+        egestas urna elit at orci. Nulla facilisi. Integer et nisl. Nam
+        ullamcorper fringilla est.
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2026 Accessible Demo Website.
+      Built with semantic HTML, CSS Grid, and accessibility best practices.
+    </p>
+  </footer>
+</body>
+</html>
